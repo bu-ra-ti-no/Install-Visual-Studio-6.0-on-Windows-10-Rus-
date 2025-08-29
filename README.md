@@ -56,13 +56,13 @@
 
 Откройте для редактирования файл `SETUPWIZ.INI` и в секции `[setup wizard]` удалите значение после знака равенства в  записи `VmPath=ie4\msjavx86.exe`, если такая есть. Это в процессе установки создаст пустую переменную окружения и не позволит мастеру поставить очень древнюю версию `MS Java`. Отредактированный INI-файл выглядит примерно так:
 
-![](https://www.codeproject.com/KB/install/1191047/setupwiz_ini.png)
+![](https://cloudfront.codeproject.com/articles/1191047/setupwiz_ini.png)
 
 ### Шаг 3
 
 Перейдите в папку, созданную на первом шаге и найдите в ней файл `SETUP.EXE`. В свойствах этого файла выставьте режим совместимости с `Windows XP SP3` (можно также `SP2`) и убедитесь, что стоит галочка `Выполнять  эту программу от имени администратора`.
 
-![](https://www.codeproject.com/KB/install/1191047/setup_exe.png)
+![](https://cloudfront.codeproject.com/articles/1191047/setup_exe.png)
 
 ## Запуск мастера установки
 
@@ -72,13 +72,13 @@
 
 На этот момент перед вами должен быть диалог `Visual Studio 6.0 Enterprise - Custom`. В этой статье мы ставим только `Visual Basic 6.0` и `Visual C++ 6.0`, поэтому вы можете отключить опции `Visual FoxPro 6.0`, `Visual InterDev 6.0` и `Visual SourceSafe 6.0`. Теперь выберите пункт `Visual C++ 6.0` и нажмите кнопку `Change Option...` для установки библиотек поддержки Юникода в MFC.
 
-![](https://www.codeproject.com/KB/install/1191047/custom.png)
+![](https://cloudfront.codeproject.com/articles/1191047/custom.png)
 
 ### Установка библиотек поддержки Юникода
 
 Хотя эта часть является необязательной, большинство современных приложений должны обеспечивать поддержку нескольких языков, и вам понадобится эта опция, если вы планируете поддерживать такие языки, как китайский, японский или арабский. Перед переходом к следующему диалогу выберите пункт `VC++ MFC and Template Libraries` и нажмите кнопку `Change Option...` Тут мы должны выбрать все пункты (кнопка `Select All`), диалог будет выглядеть так:
 
-![](https://www.codeproject.com/KB/install/1191047/unicode.png)
+![](https://cloudfront.codeproject.com/articles/1191047/unicode.png)
 
 Нажмите кнопку `OK`. Продолжайте нажимать `OK` до возвращения к диалогу `Visual Studio 6.0 Enterprise - Custom`.
 
@@ -90,13 +90,13 @@
 
 Последний параметр, который нам нужно отключить, - это анализатор `Visual Studio`. Если оставить этот флажок, установка не удастся. Для отключения выберите пункт `Enterprise Tools` и нажмите кнопку `Change Option...` Снимите флажок с `Visual Studio Analyzer` в диалоговом окне `Enterprise Tools` и нажмите кнопку `OK`.
 
-![](https://www.codeproject.com/KB/install/1191047/analyzer.png)
+![](https://cloudfront.codeproject.com/articles/1191047/analyzer.png)
 
 ### Завершение установки
 
 Теперь всё готово к старту; нажмите кнопку `Continue`, чтобы начать процесс. В диалоговом окне `Setup Environment Variables` просто оставьте пункт `Register Environment Variables` неотмеченным и нажмите кнопку `OK`. Теперь инсталлятор должен сделать своё дело. После завершения вам будет предложено перезаписать настройки JIT, выберите `NO`. Далее вы должны увидеть диалоговое окно `Restart Windows`, означающее, что установка прошла успешно. Закройте все открытые приложения и нажмите кнопку `Restart Windows`.
 
-![](https://www.codeproject.com/KB/install/1191047/restart.png)
+![](https://cloudfront.codeproject.com/articles/1191047/restart.png)
 
 После перезагрузки вас спросят, нужно ли ставить MSDN. Поступите так, как считаете нужным.
 
@@ -109,10 +109,10 @@
 
 Если на первом запуске студии всплывёт диалог  `Program Compatibility Assistant`, поставьте флажок `Don't show this message again` и нажмите кнопку `Run the program without getting help`.
 
-![](https://www.codeproject.com/KB/install/1191047/vs-compat.png)
+![](https://cloudfront.codeproject.com/articles/1191047/vs-compat.png)
 
 ## Отладка
 
 Если ваше приложение виснет и вылетает на этапе отладки, в настройках `Tools->Options` перейдите на вкладку `Debug` и снимите флажки `OLE RPC debugging` и `Debug commands invoke Edit and Continue`, затем перезапустите студию. После этого продвижение по коду в отладке не должно вызывать проблем.
 
-![](https://www.codeproject.com/KB/install/1191047/vs-debug.png)
+![](https://cloudfront.codeproject.com/articles/1191047/vs-debug.png)
